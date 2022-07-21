@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './ContactList.module.css';
+import PropTypes from 'prop-types';
 
 const ContactList = ({ contacts, onClick }) => {
   return (
@@ -26,3 +27,14 @@ const ContactList = ({ contacts, onClick }) => {
 };
 
 export default ContactList;
+
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+  onClick: PropTypes.func.isRequired,
+};

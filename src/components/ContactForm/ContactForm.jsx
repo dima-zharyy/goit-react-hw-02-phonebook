@@ -33,10 +33,13 @@ export default class ContactForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div>
-          <label htmlFor={this.inputNameId}>Name</label>
+      <form className={css.form} onSubmit={this.handleSubmit}>
+        <div className={css.formContainer}>
+          <label htmlFor={this.inputNameId} className={css.formLabel}>
+            Name
+          </label>
           <input
+            className={css.formInput}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -47,9 +50,12 @@ export default class ContactForm extends Component {
             value={this.state.name}
           />
         </div>
-        <div>
-          <label htmlFor={this.inputNumberId}>Number</label>
+        <div className={css.formContainer}>
+          <label htmlFor={this.inputNumberId} className={css.formLabel}>
+            Number
+          </label>
           <input
+            className={css.formInput}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"

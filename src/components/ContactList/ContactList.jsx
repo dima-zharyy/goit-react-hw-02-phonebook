@@ -6,10 +6,11 @@ const ContactList = ({ contacts, onClick }) => {
     <ul>
       {contacts.map(({ id, name, number }) => {
         return (
-          <li key={id}>
-            <p>
-              {name}: {number}
-            </p>
+          <li className={css.contactItem} key={id}>
+            <div className={css.contactWrap}>
+              <span className={css.contactName}>{name}: </span>{' '}
+              <span>{number}</span>
+            </div>
             <button
               type="button"
               className={css.btn}

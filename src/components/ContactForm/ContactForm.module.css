@@ -1,6 +1,40 @@
+.form {
+  margin-bottom: 20px;
+  padding: 16px;
+
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.formContainer {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.formLabel {
+  min-width: 70px;
+
+  font-weight: 600;
+}
+
+.formInput {
+  width: 100%;
+  padding-left: 6px;
+  border-bottom: 1px solid #505050;
+}
+
+.formInput:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
 .btn {
+  display: block;
   width: 100px;
   height: 30px;
+  margin: 0 auto;
   padding: 0;
 
   font-weight: 600;

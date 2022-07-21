@@ -20,6 +20,14 @@
   cursor: pointer;
 }
 
+:global(input) {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+}
+
 :global(ul) {
   list-style: none;
 }
@@ -32,6 +40,13 @@
   background-color: rgb(238, 232, 232);
   overflow: hidden;
   border-top-right-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.contactsWrap {
+  padding: 16px;
+
+  border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
